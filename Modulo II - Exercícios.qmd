@@ -1,0 +1,41 @@
+---
+# title: ""
+# date: 2023-10-05
+# author:
+#   - name: Deisy Morselli Gysi
+#     id: dm
+#     email: deisy.gysi@ufpr.br
+#     affiliation: 
+#       - name: Universidade Federal do Paraná
+#         city: Curitiba
+#         state: PR
+#         url: https://deisygysi.github.io/
+# abstract: > 
+#   Inclua aqui um resumo sobre o seu projeto. Esse resumo deve ter entre 150 e 200 palavras. Deve apresentar a motivação para o estudo, uma breve introdução, a metodologia aplicada, resultados e uma breve conclusão. Não deve conter referências bibliográficas.
+# keywords:
+#   - Análise de Dados
+#   - Exemplo
+# lang: pt
+# bibliography: refs.bib
+# csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+code-fold: true
+code-line-numbers: true
+execute: 
+  warning: false
+  error: false
+format: 
+  html: default
+  pdf: default
+---
+
+### LIMITES POR SUBSTITUIÇÃO DIRETA
+
+3. Nos itens abaixo, utilize a Regra de **l’Hôspital**, quando apropriado, para calcular o limite.
+
+a) $\displaystyle{\lim_{x \to 1}}\frac{x^3-x^2+1}{x^3-1}$
+
+b) $\displaystyle{\lim_{x \to 0}}\frac{e^{2x}-1}{\sin x}$
+i. Pode-se aplicar l'Hôspital, pois $\displaystyle{\lim_{x \to 0}}\frac{e^{2x}-1}{\sin x} = \frac{0}{0}$
+ii. $\displaystyle{\lim_{x \to 0}}\frac{e^{2x}-1}{\sin x} = \displaystyle{\lim_{x \to 0}}\ 2 \frac{e^{2x}}{\cos x}=\frac{2*1}{1}=2$
+iii. $\displaystyle{\lim_{x \to 0}}\frac{e^{2x}-1}{\sin x} = 2$
+
