@@ -1,0 +1,101 @@
+---
+# title: ""
+# date: 2023-10-05
+# author:
+#   - name: Deisy Morselli Gysi
+#     id: dm
+#     email: deisy.gysi@ufpr.br
+#     affiliation: 
+#       - name: Universidade Federal do Paraná
+#         city: Curitiba
+#         state: PR
+#         url: https://deisygysi.github.io/
+# abstract: > 
+#   Inclua aqui um resumo sobre o seu projeto. Esse resumo deve ter entre 150 e 200 palavras. Deve apresentar a motivação para o estudo, uma breve introdução, a metodologia aplicada, resultados e uma breve conclusão. Não deve conter referências bibliográficas.
+# keywords:
+#   - Análise de Dados
+#   - Exemplo
+# lang: pt
+# bibliography: refs.bib
+# csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+code-fold: true
+code-line-numbers: true
+execute: 
+  warning: false
+  error: false
+format: 
+  html: default
+  pdf: default
+---
+
+### LIMITES POR SUBSTITUIÇÃO DIRETA
+
+Pode-se efetuar o cálculo de um limite quando a expressão $E(x)$ no $\displaystyle{\lim_{x \to a}} \ E(x)$, quando $E(x)$ é uma função polinomial ou é uma função racional  **$a$** pertencente ao domínio da expressão $E(x)$.
+
+> **Obs.:** Note que as vezes é necessário fazer alguma simplificação algébrica antes de aplicar a substituição direta no limite.
+
+#### Exemplo 1:
+
+Se, $E(x) = \frac{{(x-1)^2}}{{x^2-1}}$, e deseja-se calcular $\displaystyle{\lim_{x \to 1}} \ \frac{{(x-1)^2}}{{x^2-1}}$, então deve-se simplificar a expressão dada, como segue:
+
+$\frac{{(x-1)^2}}{{x^2-1}} = \frac{{(x-1)^2}}{{(x-1)(x+1)}} = \frac{x-1}{x+1}$, para todo $(x \neq 0)$. Logo, obtém que $\displaystyle{\lim_{x \to 1}}$ $E(x) = \displaystyle{\lim_{x \to 1}} \frac{x-1}{x+1} = 0$
+
+#### Exemplo 2:
+Dado $f(x) = x^2$, para todo $x \in \mathbb{R}$, defina $g(x) = \frac{f(2+x)-f(2)}{x}$, para $x \neq 0$ e considere que deseja-se calcular $\displaystyle{\lim_{x \to 0}} \ g(x)$. Faz-se então:
+
+$g(x) = \frac{f(2+x)-f(2)}{x} = \frac{(2+x)^2-4}{x} = \frac{4+4x+x^2-4}{x} = \frac{x(4+x)}{x} = 4 +x$
+
+$\Rightarrow \displaystyle{\lim_{x \to 0}} \ g(x) = \displaystyle{\lim_{x \to 0}} \ (4+x) = 4$
+
+
+$$\displaystyle{\lim_{x \to 0^+}}$$
+$$\displaystyle{\lim_{x \to 0^-}}$$
+
+```{r}
+
+
+```
+
+### Propriedade Adicionais de Limite
+
+**1.** Se $f(x) \leq g(x)$ para todo $x \in (a - \delta, a + \delta)$ com $\delta > 0$ (exceto, possivelmente $x = a$), então:
+$\displaystyle{\lim_{x \to a}} \ f(x) \leq \displaystyle{\lim_{x \to a}} \ g(x)$, desde que tais limites existam;
+
+**2.** **Teorema do Confronto (Teorema do Sanduíche)**
+Sejam $f, g, h$ funções tais que $f(x) \leq g(x) \leq h(x)$, para todo $x \in (a - \delta, a + \delta)$, com $\delta > 0$ (exceto, possivelmente em $x = a$).
+$\displaystyle{\lim_{x \to a}} \ f(x) = L = \displaystyle{\lim_{x \to a}} \ h(x)$, então $\displaystyle{\lim_{x \to a}} \ g(x) = L$;
+
+**3.** Sejam $f, g$ funções tais que $\displaystyle{\lim_{x \to a}} = 0$ e $|y(x)| \leq M$, para alguns $M > 0$ e para todo $x \in (a - \delta, a + \delta)$, com $\delta > 0$ (exceto, possivelmente em $x = a$).
+Então:
+$\displaystyle{\lim_{x \to a}} \ [f(x), \ g(x)] = 0$
+
+>**Obs.1:** Note que apesar de $g(x) = \frac {sen (\pi)}{x}$ não ter limite no ponto $a = 0$, existe o $\displaystyle{\lim_{{x \to a}} = \left[\frac {\sqrt{|x|} \times sen(\pi)}{x}\right]}$. De fato, com $a - 1 \leq \frac{sen(\pi)}{x} \leq 1$ e assim, $\underbrace{\sqrt{|x|} \times (- 1)}_{f(x)} \leq \underbrace{\frac{\sqrt{|x|} \times sen(\pi)}{x}}_{g(x)} \leq \underbrace{\sqrt{|x|}}_{h(x)}$, para todo $x \neq 0$.
+>
+Segue entao, pelo **Teorema do Confronto**, que $\displaystyle{\lim_{x \to a}} \frac {\sqrt{|x|} \times sen(\pi)}{x} = 0$
+
+### LIMITES POR SUBSTITUIÇÃO DIRETA
+
+Sejam $L \in \mathbb{R}$, *a* um ponto de $\mathbb{R}$ tal que ou *a* $Dom (f)$ ou *a* é extremo de um dos intervalos que comõe o domínio da função $f: Dom (f) \to \mathbb{R}$.
+
+Diz-se que $L$ é o limite de $f(X)$ no ponto *a* se para todo $\epsilon >0$, existe um número $\delta >0$ tal que se $0 < |x - a| > \delta$, com $x \in Dom (f)$, então $|f(x) - L| < \epsilon$.
+
+#### Exemplo 1:
+Dada $f(x) = \frac{1}{2}x - \frac{3}{2}$, deseja-se provar que o limite $\displaystyle{\lim_{x \to 1}}\ f(x) = -1$.
+
+Logo, deve-se provar que para to $\epsilon > 0$ existe um $\delta > 0$ tal que se $0 < |x -1| < \delta$, então $|f(x) - (-1) < \delta \Leftrightarrow|\frac{1}{2}x - \frac{3}{2} + 1 < \epsilon$
+
+Nota-se que:
+$|\frac{1}{2}x - \frac{3}{2} + 1| = |\frac{1}{2}x - \frac{1}{2}| = |\frac{1}{2} (x-1)| = \frac{1}{2}|x-1| < \epsilon \Leftrightarrow |x-1| < 2 \epsilon$ e assim deve-se tornar $\delta = 2\epsilon$ (ou qualquer número positivo menor que $2 \epsilon$). 
+Então, $|f(x) - (-1)| = |\frac{1}{2}(x-1)| = \frac{1}{2}|x-1| < \frac{1}{2} \times \delta = \frac{1}{2}\times(2\epsilon) = \epsilon$
+
+#### Exemplo 2:
+Dada $f(x) = (x-1)^2$, definida para todo $x \in \mathbb{R}$, deseja-se provar que $\displaystyle {\lim_{x \to 3}} \ f(x) = 4$
+
+Nota-se que $|f(x) -4| = |x - 1|^2 -4| = |(x^2 - 2x + 1) - -4| = |x^2-2x-3| = |(x-3)(x+1)=|x-3||x+1|$
+
+Dado que $x$ deve estar suficiente próximo podemos admitir que $|x-3|<1 \Leftrightarrow -1< x-3<1 \Leftrightarrow -1+4<x-3+4 \Leftrightarrow 3<x+1<5 \Leftrightarrow 3<|x+1|<5$
+
+
+
+
+
